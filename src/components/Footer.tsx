@@ -6,8 +6,8 @@ import { IoLogoYoutube } from "react-icons/io5";
 
 function Footer() {
   return (
-    <footer className="bg-w1 border-t border-t-pDark/5 px-24">
-      <div className="w-[85%] m-auto flex justify-between mb-8 gap-8 py-12">
+    <footer className="bg-w1 border-t border-t-pDark/5 px-6 md:px-24">
+      <div className="w-full md:w-[85%] m-auto flex flex-col md:flex-row justify-between mb-8 gap-8 py-12">
         <div>
           <h5 className="text-sm font-bold text-p1 mb-3">About</h5>
           <ul className="list-none flex flex-col gap-4 text-sm">
@@ -79,8 +79,8 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-t-pDark/10 p-8 flex justify-between items-center">
-        <div className="flex text-sm font-semibold">
+      <div className="border-t border-t-pDark/10 p-4 md:p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div className="flex flex-col md:flex-row text-sm font-semibold">
           <p className="mr-2">
             19 Olatunji Ige Street, Ikosi Ketu, Lagos State, NG. 🇳🇬 |{" "}
           </p>
@@ -103,7 +103,7 @@ function Footer() {
           </Link>
         </div>
       </div>
-      <p className="text-sm w-[80%] m-auto text-center border-t border-t-pDark/5 p-8">
+      <p className="text-sm w-full md:w-[80%] m-auto text-center border-t border-t-pDark/5 p-8">
         <span className="text-amber-500 font-bold relative inline-flex items-center shiny-text">
           Celebrating 50 years of Gods faithfulness
         </span>{" "}

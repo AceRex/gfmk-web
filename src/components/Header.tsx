@@ -16,31 +16,31 @@ function Header() {
           <nav className="hidden md:flex items-center space-x-8 text-sm">
             <Link
               href="/sermons"
-              className="text-white hover:text-pDark hover:font-semibold transition-all duration-300"
+              className="text-yellow-400 hover:text-yellow-700 hover:font-semibold transition-all duration-300"
             >
               Sermon
             </Link>
             <Link
               href="/daily-devotion"
-              className="text-white hover:text-pDark hover:font-semibold transition-all duration-300"
+              className="text-yellow-400 hover:text-yellow-700 hover:font-semibold transition-all duration-300"
             >
               Daily Devotion
             </Link>
             <Link
               href="/blog"
-              className="text-white hover:text-pDark hover:font-semibold transition-all duration-300"
+              className="text-yellow-400 hover:text-yellow-700 hover:font-semibold transition-all duration-300"
             >
               Blog
             </Link>
             <Link
               href="/about"
-              className="text-white hover:text-pDark hover:font-semibold transition-all duration-300"
+              className="text-yellow-400 hover:text-yellow-700 hover:font-semibold transition-all duration-300"
             >
               About
             </Link>
             <Link
               href="/ministers"
-              className="text-white hover:text-pDark hover:font-semibold transition-all duration-300"
+              className="text-yellow-400 hover:text-yellow-700 hover:font-semibold transition-all duration-300"
             >
               Meet our Ministers
             </Link>
