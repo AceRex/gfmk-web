@@ -1,6 +1,12 @@
 "use client";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import Image from "next/image";
+import fellowship from "../../public/fellowship.jpeg";
+import media from "../../public/media.jpg";
+import teach from "../../public/teach.jpg";
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa6";
 
 export default function Home() {
   const sop = [
@@ -76,29 +82,115 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main>
       <div
         style={{
-          width: "100%",
-          height: "100vh",
-          backgroundImage: 'url("/bg.jpg")',
+          backgroundImage: 'url("/light.jpg")',
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "top",
           backgroundRepeat: "no-repeat",
+          backgroundColor: "rgba(0, 0, 0, 0.6)",
+          backgroundBlendMode: "overlay",
         }}
-        className="min-h-screen  relative"
+        className="w-full"
       >
-        <div
-          ref={textRef}
-          className="text-red-500 absolute -bottom-0 font-semibold left-0 text-[300px] tracking-[-0.1em]"
-        >
-          {sop[0].title}
+        <div className="h-screen flex flex-col items-center justify-center">
+          <p
+            ref={textRef}
+            className="text-white font-semibold text-[200px] tracking-[-0.1em]"
+          >
+            {sop[0].title}
+          </p>
+          <span
+            ref={descRef}
+            className="w-[700px] text-center font-light text-white text-[24px]"
+          >
+            {sop[0].description}
+          </span>
         </div>
-        <div
-          ref={descRef}
-          className="absolute bottom-[250px] right-0 w-[500px] font-light text-[20px]"
-        >
-          {sop[0].description}
+
+        <div className="w-full min-h-screen bg-pDark backdrop-blur-md p-[12px] flex flex-col items-center justify-center">
+          <div className="max-w-[1350px] min-w-0 mx-auto w-full space-y-[40px]">
+            <div className="space-y-[12px]">
+              <div className="bg-w2/30 backdrop-blur-md font-medium border border-white rounded-[12px] text-[12px] w-fit py-[4px] px-[16px] flex items-center justify-center text-w2">
+                🏠 This is Home!!!
+              </div>
+              <div className="space-y-[2px]">
+                <h3 className="font-extrabold text-w1 text-[30px] tracking-[-0.05em]">
+                  WELCOME TO CHURCH
+                </h3>
+                <h2 className="text-w1 font-extralight text-[18px]">
+                  This is -{" "}
+                  <span className="font-semibold">
+                    The Gospel Faith Mission International,
+                    <br /> Ketu District.
+                  </span>
+                </h2>
+              </div>
+            </div>
+            <div className="flex items-center gap-[30px] w-full">
+              <div className="h-[500px] bg-white w-1/3 relative rounded-[12px] overflow-hidden">
+                <div className="absolute bottom-0 w-full z-10 p-[12px]">
+                  <p className=" text-[30px] text-white uppercase font-extrabold">
+                    Sermon
+                  </p>
+                  <Link href={"#"}>
+                    <p className="text-w1 text-[12px] w-fit flex items-center justify-center gap-[6px] bg-w1/40 backdrop-blur-md px-[10px] py-[4px] rounded-[12px] border-[0.5px]">
+                      Listen or download sermons
+                      <FaArrowRight />
+                    </p>
+                  </Link>
+                </div>
+                <Image
+                  src={teach}
+                  alt="fellowship"
+                  fill
+                  className="object-cover h-full"
+                />
+                <div className="absolute bg-gradient-to-t from-black/70 to-transparent w-full h-full top-0 left-0" />
+              </div>
+              <div className="h-[500px] bg-white w-1/3 relative rounded-[12px] overflow-hidden">
+                <div className="absolute bottom-0 w-full z-10 p-[12px]">
+                  <p className=" text-[30px] text-white uppercase font-extrabold">
+                    Daily devotion
+                  </p>
+                  <Link href={"#"}>
+                    <p className="text-w1 text-[12px] w-fit flex items-center justify-center gap-[6px] bg-w1/40 backdrop-blur-md px-[10px] py-[4px] rounded-[12px] border-[0.5px]">
+                      Go to our Daily devotion
+                      <FaArrowRight />
+                    </p>
+                  </Link>
+                </div>
+                <Image
+                  src={fellowship}
+                  alt="fellowship"
+                  fill
+                  className="object-cover h-full"
+                />
+                <div className="absolute bg-gradient-to-t from-black/70 to-transparent w-full h-full top-0 left-0" />
+              </div>
+              <div className="h-[500px] bg-white w-1/3 relative rounded-[12px] overflow-hidden">
+                <div className="absolute bottom-0 w-full z-10 p-[12px]">
+                  <p className=" text-[30px] text-white uppercase font-extrabold">
+                    Connect with us
+                  </p>
+                  <Link href={"#"}>
+                    <p className="text-w1 text-[12px] w-fit flex items-center justify-center gap-[6px] bg-w1/40 backdrop-blur-md px-[10px] py-[4px] rounded-[12px] border-[0.5px]">
+                      Go to our Social pages
+                      <FaArrowRight />
+                    </p>
+                  </Link>
+                </div>
+                <Image
+                  src={media}
+                  alt="fellowship"
+                  fill
+                  className="object-cover h-full"
+                />
+                <div className="absolute bg-gradient-to-t from-black/80 to-transparent w-full h-full top-0 left-0" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
