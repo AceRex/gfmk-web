@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import ImageTest from "./maxresdefault.jpg";
+// import ImageTest from "./maxresdefault.jpg";
 import cover from "./cover.jpg";
 import { CiPlay1, CiStop1 } from "react-icons/ci";
 import { TbLocationShare } from "react-icons/tb";
@@ -86,8 +86,8 @@ export default function Home() {
                 play && !preview
                   ? "autoplay=1&mute=1&modestbranding=1&showinfo=0&controls=0&rel=0"
                   : play && preview
-                  ? "autoplay=1&modestbranding=1&showinfo=1&controls=1&rel=0"
-                  : ""
+                    ? "autoplay=1&modestbranding=1&showinfo=1&controls=1&rel=0"
+                    : ""
               }`}
               title="Video Preview"
               frameBorder="0"

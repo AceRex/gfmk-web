@@ -74,7 +74,7 @@ export default function Home() {
             </div>
           </div>
           {!preview ? (
-            <Image src={ImageTest} alt="" className="h-full w-full" />
+            <Image src={""} alt="" className="h-full w-full" />
           ) : (
             <iframe
               width="1000"
@@ -83,8 +83,8 @@ export default function Home() {
                 play && !preview
                   ? "autoplay=1&mute=1&modestbranding=1&showinfo=0&controls=0&rel=0"
                   : play && preview
-                  ? "autoplay=1&modestbranding=1&showinfo=1&controls=1&rel=0"
-                  : ""
+                    ? "autoplay=1&modestbranding=1&showinfo=1&controls=1&rel=0"
+                    : ""
               }`}
               title="Video Preview"
               frameBorder="0"
